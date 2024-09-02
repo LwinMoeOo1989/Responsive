@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Order Submission Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: "Roboto","Arial","sans-serif";
+        font-size: 1rem;
+    }
+
+    form {
+        background-color: #ccc;
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+    }
+
+    label {
+        float: left;
+        width: 450px;
+        clear: left;
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 30px;
+
+    }
+
+    input,
+    textarea {
+        margin-top: 10px;
+        display: block;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    input{
+        text-align: right;
+    }
+    .radioopen{
+        margin-top: 10px;
+    }
+    #Yes,
+    #No {
+        margin-top: 10px;
+        padding: 20px;
+        display: inline;
+    }
+
+    #mysubmit {
+        padding: 20px;
+        margin-left: 450px;    
+        display: grid;
+       
+    }
+
+    @media screen and (max-width:600px) {
+        label {
+            float: none;
+            width: 100%;
+        }
+        .radioopen{
+       padding-top: 20px;
+        }
+        #Yes,
+        #No{
+            display: block;
+        }
+        #mysubmit {
+            margin-left: 110px;
+        }
+    }
+</style>
+
+<body>
+    <h1> Return Order Submission Form</h1>
+    <form action="return-form.php">
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <label for="FirstName">First Name</label>
+
+            <input type="text" id="FirstName" name="FirstName" placeholder="First Name">
+
+            <label for="LastName">Last Name</label>
+
+            <input type="text" id="LastName" name="LastName" placeholder="Last Name">
+
+            <label for="Email">Email</label>
+
+            <input type="text" id="Email" name="Email" placeholder="Email">
+
+            <label for="Phone">Phone</label>
+
+            <input type="text" id="Phone" name="Phone" placeholder="Phone No">
+
+            <label for="Address">Address</label>
+
+            <input type="text" id="Address" name="Address" placeholder="Address">
+        </fieldset>
+        <label for="OrderDate">Order Date</label>
+
+        <input type="date" id="OrderDate" name="OrderDate" placeholder="dd-mm-yyyy">
+
+        <label for="InvoiceNumber">Invoice Number</label>
+
+        <input type="number" id="InvoiceNumber" name="InvoiceNumber" placeholder="00000000">
+
+        <label for="ItemReturning">Item Returning</label>
+
+        <input type="text" id="ItemReturning" name="ItemReturning" placeholder="Item Returning">
+
+        <label for="Opened" class="radioopen">Has it been Opened?</label>
+
+        <input type="radio" name="Opened" id="Yes" value="Yes">Male
+        <input type="radio" name="Opened" id="No" value="No">Female<br><br>
+
+        <label for="whyreturingitem">Why are you returing this item?</label>
+
+        <textarea name="whyreturingitem" id="whyreturingitem" rows="4" cols="40" placeholder="Why are you returing this item"></textarea><br><br>
+
+
+        <input type="submit" id="mysubmit" value="Submit">
+
+    </form>
+</body>
+
+</html>
